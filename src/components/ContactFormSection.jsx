@@ -9,11 +9,13 @@ import emailjs from "@emailjs/browser";
 
 import "./ContactFormSection.css";
 import { useRef } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 const ContactFormSection = () => {
   const form = useRef();
   const SERVICE_ID= import.meta.env.VITE_SERVICE_ID;
   const PUBLIC_KEY= import.meta.env.VITE_PUBLIC_KEY;
+  const notify = () => toast('Wow so easy !');
   
  
 
@@ -27,10 +29,36 @@ const ContactFormSection = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          toast('💬 Message sent successfully ', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            className: 'bg-[#FAF7F0]',
+            
+            
+            });
+            form.current.reset(); // Clear the form fields
         },
         (error) => {
           console.log("FAILED...", error.text);
+          toast('🚫 Something Wrong ', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            className: 'bg-[#FAF7F0]',
+            });
         }
+        
       );
   };
 
@@ -45,12 +73,12 @@ const ContactFormSection = () => {
 
         <form className="form" ref={form} onSubmit={sendEmail}>
           <div className="form-row">
-            <input type="text" placeholder="Name" className="form-input" name="name"/>
-            <input type="email" placeholder="Email" className="form-input" name="email"/>
+            <input type="text" placeholder="Name" className="form-input" name="name" required />
+            <input type="email" placeholder="Email" className="form-input" name="email" required />
           </div>
           <div className="form-row">
-            <input type="text" placeholder="Phone" className="form-input" name="phone" />
-            <select className="form-input" name="service">
+            <input type="text" placeholder="Phone" className="form-input" name="phone" required />
+            <select className="form-input" name="service" required >
               <option value="">Select Service</option>
               <option value="tour">Tour</option>
               <option value="accommodation">Accommodation</option>
@@ -104,6 +132,7 @@ const ContactFormSection = () => {
           </div>
         </div>
       </div>
+      <ToastContainer  />
     </div>
   );
 };
