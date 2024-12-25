@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "image": "https://source.unsplash.com/featured/?city",
+    "image": "roadImg.jpg",
     "title": "City Vibes"
   },
   {
     "id": 2,
-    "image": "https://source.unsplash.com/featured/?landscape",
+    "image": "historic.jpg",
     "title": "Historic Views"
   },
   {
     "id": 3,
-    "image": "https://source.unsplash.com/featured/?colorful",
+    "image": "Coastel.jpg",
     "title": "Coastal Beauty"
   },
   {
     "id": 4,
-    "image": "https://source.unsplash.com/featured/?mountains",
+    "image": "Mountain.jpg",
     "title": "Mountain Scenery"
   },
   {
     "id": 5,
-    "image": "https://source.unsplash.com/featured/?balloon",
+    "image": "air_baloon.jpg",
     "title": "Hot Air Balloons"
   },
   {
     "id": 6,
-    "image": "https://source.unsplash.com/featured/?city",
+    "image": "roadImg.jpg",
     "title": "City Vibes"
   }
 ]

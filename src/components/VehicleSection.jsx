@@ -13,6 +13,8 @@ const coupeImage = '/coupe.jpeg';
 const hatchbackImage = '/hatchback.jpeg';
 const hybridImage = '/hybrid.jpeg';
 
+
+
 const VehicleSection = () => {
     return (
         <div
