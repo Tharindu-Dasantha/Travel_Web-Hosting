@@ -24,18 +24,26 @@ const PackagesSection = () => {
     const handleMouseLeave = () => setIsHovered(false);
 
     return (
-        <div className="flex py-[4.6875rem] px-0 flex-col justify-center items-center gap-[3.125rem] self-stretch bg-[#042630]">
-            <TopSection title={"Top Packages"} description={"This text presents my research journey on the topic of Music and Tourism Imaginaries and gives the context which led to the publication of this special issue of Via Tourism Review."}/>
-            <div className="flex justify-center items-center gap-[3rem]">
-                <PackageCard name={"Sigiriya"} image={sigiriyaImage} duration={"10"}/>
-                <PackageCard name={"Sinharajaya"} image={sinharajayaImage} duration={"5"}/>
-                <PackageCard name={"Ella"} image={ellaImage} duration={"6"}/>
+        <div className="flex py-8 px-4 sm:py-[4.6875rem] sm:px-6 flex-col justify-center items-center gap-6 sm:gap-[3.125rem] self-stretch bg-[#042630]">
+            <TopSection
+                title={"Top Packages"}
+                description={
+                    "This text presents my research journey on the topic of Music and Tourism Imaginaries and gives the context which led to the publication of this special issue of Via Tourism Review."
+                }
+            />
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-[3rem]">
+                <PackageCard name={"Sigiriya"} image={sigiriyaImage} duration={"10"} />
+                <PackageCard name={"Sinharajaya"} image={sinharajayaImage} duration={"5"} />
+                <PackageCard name={"Ella"} image={ellaImage} duration={"6"} />
             </div>
 
             <button
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className={`rounded-[0.625rem] p-3 bg-[#D0D6D6] text-[#042630] font-work-sans text-[0.875rem] font-semibold leading-normal uppercase transition-all duration-300 ease-in-out shadow-[0_0_10px_2px_white] ${isAnimating ? 'scale-110' : 'scale-105'}`}>
+                className={`rounded-[0.625rem] p-3 sm:p-4 bg-[#D0D6D6] text-[#042630] font-work-sans text-sm sm:text-[0.875rem] font-semibold leading-normal uppercase transition-all duration-300 ease-in-out shadow-[0_0_10px_2px_white] ${
+                    isAnimating ? "scale-110" : "scale-105"
+                }`}
+            >
                 Customize Your Package
             </button>
         </div>
