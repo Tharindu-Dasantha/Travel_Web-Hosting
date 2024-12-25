@@ -42,17 +42,17 @@ const ContactFormSection = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8 mx-8 my-20 flex gap-20 items-center justify-center">
-      <div className="left-sub-container">
+    <div className="bg-white rounded-lg  shadow-lg p-8 mx-8  my-20 flex flex-col lg:flex-row gap-8 lg:gap-20 items-center justify-center lg:pl-80 ">
+      <div className="left-sub-container lg:w-1/2 ">
         <h1 className="text-2xl text-gray-800 mb-2">Let’s Plan your Ideal Vacation</h1>
         <p className="text-gray-500 mb-6">Fill up the form below and have our agent help you with your ideal travel in Sri Lanka.</p>
 
         <form className="flex flex-col" ref={form} onSubmit={sendEmail}>
-          <div className="flex gap-4 mb-4">
+          <div className="flex flex-col lg:flex-row gap-4 mb-4">
             <input type="text" placeholder="Name" className="p-3 text-sm border border-gray-300 rounded-md flex-1" name="name" required />
             <input type="email" placeholder="Email" className="p-3 text-sm border border-gray-300 rounded-md flex-1" name="email" required />
           </div>
-          <div className="flex gap-4 mb-4">
+          <div className="flex flex-col lg:flex-row gap-4 mb-4">
             <input type="text" placeholder="Phone" className="p-3 text-sm border border-gray-300 rounded-md flex-1" name="phone" required />
             <select className="p-3 text-sm border border-gray-300 rounded-md flex-1" name="service" required>
               <option value="">Select Service</option>
@@ -66,8 +66,8 @@ const ContactFormSection = () => {
         </form>
       </div>
 
-      <div className="contact-details mt-8 flex flex-col gap-8">
-        <div className="contact-item flex items-start gap-10">
+      <div className="contact-details mt-8 lg:mt-0 lg:w-1/2 flex flex-col gap-8">
+        <div className="contact-item flex  lg:flex-row items-start gap-10">
           <div className="border rounded-md border-teal-700 p-3">
             <IoCall size={35} />
           </div>
@@ -77,7 +77,7 @@ const ContactFormSection = () => {
           </div>
         </div>
 
-        <div className="contact-item flex items-start gap-10">
+        <div className="contact-item flex  lg:flex-row items-start gap-10">
           <div className="border rounded-md border-teal-700 p-3">
             <IoIosMail size={35} />
           </div>
